@@ -58,7 +58,7 @@ class App extends Component{
               <div className="navbar-nav ml-auto">
                 <li className="nav-item"><Link to={"/productos"} className="nav-link">Productos</Link></li>
                 <li className="nav-item"><Link to={"/profile"} className="nav-link">Perfil</Link></li>
-                <li className="nav-item"><Link to={"/login"} className="nav-link" onClick={this.logOut}>Cerrar sesion</Link></li>
+                <li className="nav-item"><a href="/login" className="nav-link" onClick={this.logOut}>Cerrar sesion</a></li>
               </div>
             ) : (
               <div className="navbar-nav ml-auto">
@@ -69,11 +69,11 @@ class App extends Component{
           </nav>
           <div className="container mt-3">
             <Switch>
-              <Route exact path={["/", "/register"]} componen={Register}/>
-              <Route exact path="/login" componen={Login}/>
-              <Route exact path="/register" componen={Register}/>
-              <Route exact path="profile" componen={Profile}/>
-              <Route exact path="/user" componen={User}/>
+              <Route exact path={["/", "/register"]} component={Register}/>
+              <Route exact path="/login" component={Login}/>
+              <Route exact path="/register" component={Register}/>
+              <Route exact path="/profile" component={Profile}/>
+              <Route exact path="/user" component={User}/>
             </Switch>
           </div>
         </div>

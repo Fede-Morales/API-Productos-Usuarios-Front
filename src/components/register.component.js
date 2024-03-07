@@ -14,19 +14,19 @@ const required = (value) =>{
 
 const email = (value) =>{
     if(!isEmail(value)){
-        return (<div className="alert alert-danger" role="alert"> No es un email valido </div>)
+        return (<div className="alert alert-danger" role="alert"> No es un email valido </div>);
     }
 };
 
 const vNombreUsuario = (value) =>{
     if(value.length < 3 || value.length > 20){
-        return (<div className="alert alert-danger" role="alert"> El nombre de usuario debe tener entre 3 y 20 caracteres </div>)
+        return (<div className="alert alert-danger" role="alert"> El nombre de usuario debe tener entre 3 y 20 caracteres </div>);
     }
 };
 
 const vNombre = (value) =>{
     if(value.length < 3 || value.length > 20){
-        return (<div className="alert alert-danger" role="alert"> El nombre debe tener entre 3 y 20 caracteres </div>)
+        return (<div className="alert alert-danger" role="alert"> El nombre debe tener entre 3 y 20 caracteres </div>);
     }
 };
 
@@ -41,13 +41,13 @@ class Register extends Component{
         super(props);
         this.handleRegister = this.handleRegister.bind(this);
         this.onChangeNombre = this.onChangeNombre.bind(this);
-        this.onChangeNombre = this.onChangeNombreUsuario.bind(this);
+        this.onChangeNombreUsuario = this.onChangeNombreUsuario.bind(this);
         this.onChangeEmail = this.onChangeEmail.bind(this);
         this.onChangePassword = this.onChangePassword.bind(this);
 
         this.state = {
             nombre: "",
-            vNombreUsuario: "",
+            nombreUsuario: "",
             email: "",
             password: "",
             successful: false,
@@ -124,11 +124,11 @@ class Register extends Component{
                                 </div>
                                 <div className="form-group">
                                     <label htmlFor="password">Password</label>
-                                    <Input type="text" className="form-control" name="password" value={this.state.password}
+                                    <Input type="password" className="form-control" name="password" value={this.state.password}
                                         onChange={this.onChangePassword} validations={[required, vpassword]}/>
                                 </div>
                                 <div className="form-group">
-                                    <button className="btn btn-dark btn-block">Iniciar</button>
+                                    <button className="btn btn-dark btn-block">Registrar</button>
                                 </div>
                             </div>
                         )}

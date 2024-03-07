@@ -9,7 +9,7 @@ export default class User extends Component{
     }
 
     componentDidMount(){
-        UserService.getGreetings.then(
+        UserService.getGreetings().then(
             response => {
                 this.setState({ content: response.data.message});
             },

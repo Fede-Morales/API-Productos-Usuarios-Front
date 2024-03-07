@@ -7,6 +7,8 @@ class Profile extends Component {
 
     render() {
         const { user: currentUser } = this.props;
+        console.log(currentUser.Nombre);
+        console.log(currentUser.Email);
         console.log(currentUser);
 
         if (!currentUser) { return <Redirect to="/login" /> }
@@ -32,8 +34,9 @@ class Profile extends Component {
                                     <div className="card-body text-center">
                                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                                             className="rounded-circle img-fluid" style={{ width: "150px" }} />
-                                        <h5 className="my-3">{currentUser.userName}</h5>
-                                        <p className="text-muted mb-1">{(currentUser.roles).replace("[", "").replace("]", "")}</p>
+                                        <h5 className="my-3">{currentUser.Rol}</h5>
+                                        <p className="text-muted mb-1">{(currentUser.Rol).replace("[", "").replace("]", "")}</p>
+                                        {/* <p className="text-muted mb-1">{currentUser.roles ? currentUser.roles.replace("[", "").replace("]", "") : ""}</p> */}
                                         <p className="text-muted mb-4">Buenos Aires, Argentina</p>
                                         <div className="d-flex justify-content-center mb-2">
                                             <button type="button" className="btn btn-primary">Seguir</button>
@@ -54,7 +57,7 @@ class Profile extends Component {
                                             </li>
                                             <li className="list-group-item d-flex justify-content-between aling-items-center p-3">
                                                 <i className="fab fa-twitter fa-lg" style={{ color: "#55acee" }}></i>
-                                                <p className="mb-0">mdbootstrap</p>
+                                                <p className="mb-0">@mdbootstrap</p>
                                             </li>
                                             <li className="list-group-item d-flex justify-content-between aling-items-center p-3">
                                                 <i className="fab fa-instagram fa-lg" style={{ color: "#ac2bac" }}></i>
@@ -76,7 +79,7 @@ class Profile extends Component {
                                                 <p className="mb-0">Nombre completo</p>
                                             </div>
                                             <div className="col-sm-9">
-                                                <p className="text-muted mb-0">{currentUser.name}</p>
+                                                <p className="text-muted mb-0">{currentUser.Nombre}</p>
                                             </div>
                                         </div>
                                         <hr />
@@ -85,7 +88,8 @@ class Profile extends Component {
                                                 <p className="mb-0">Email</p>
                                             </div>
                                             <div className="col-sm-9">
-                                                <p className="text-muted mb-0">{currentUser.email}</p>
+                                                <p className="text-muted mb-0">{currentUser.Email}</p>
+                                            
                                             </div>
                                         </div>
                                         <hr />
@@ -125,27 +129,27 @@ class Profile extends Component {
                                                 </p>
                                                 <p className="mb-1" style={{ fontSize: ".77rem" }}>Diseño web</p>
                                                 <div className="progress rounded" style={{ height: "5px" }}>
-                                                    <div className="rogress-bar" role="progressbar" style={{ width: "80%" }} aria-valuenow="80"
+                                                    <div className="progress-bar" role="progressbar" style={{ width: "80%" }} aria-valuenow="80"
                                                         aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>Marca de sitio web</p>
                                                 <div className="progress rounded" style={{ height: "5px" }}>
-                                                    <div className="rogress-bar" role="progressbar" style={{ width: "72%" }} aria-valuenow="72"
+                                                    <div className="progress-bar" role="progressbar" style={{ width: "72%" }} aria-valuenow="72"
                                                         aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>Una pagina</p>
                                                 <div className="progress rounded" style={{ height: "5px" }}>
-                                                    <div className="rogress-bar" role="progressbar" style={{ width: "89%" }} aria-valuenow="89"
+                                                    <div className="progress-bar" role="progressbar" style={{ width: "89%" }} aria-valuenow="89"
                                                         aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>Template movil</p>
                                                 <div className="progress rounded" style={{ height: "5px" }}>
-                                                    <div className="rogress-bar" role="progressbar" style={{ width: "55%" }} aria-valuenow="55"
+                                                    <div className="progress-bar" role="progressbar" style={{ width: "55%" }} aria-valuenow="55"
                                                         aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                                 <p className="mt-4 mb-1" style={{ fontSize: ".77rem" }}>Backend API</p>
                                                 <div className="progress rounded" style={{ height: "5px" }}>
-                                                    <div className="rogress-bar" role="progressbar" style={{ width: "66%" }} aria-valuenow="66"
+                                                    <div className="progress-bar" role="progressbar" style={{ width: "66%" }} aria-valuenow="66"
                                                         aria-valuemin="0" aria-valuemax="100"></div>
                                                 </div>
                                             </div>

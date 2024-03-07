@@ -11,7 +11,7 @@ const required = (value) =>{
     if(!value){
         return (
             <div className="alert alert-danger" role="alert">
-                This field is required!
+                Este campo es obligatorio
             </div>
         );
     }
@@ -43,7 +43,6 @@ class Login extends Component{
         });
     }
     
-
     handleLogin(e){
         e.preventDefault();
 
@@ -157,4 +156,4 @@ function mapStateToProps(state) {
     };
 }
 
-export default connect (mapStateToProps)(login);
+export default connect(mapStateToProps)(Login);
