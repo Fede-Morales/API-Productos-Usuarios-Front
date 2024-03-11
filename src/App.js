@@ -7,6 +7,7 @@ import Login from "./components/login.component";
 import Register from "./components/register.component";
 import Profile from "./components/profile.component";
 import User from "./components/user.component";
+import Productos from "./components/productos.component"; 
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 import { history } from "./helpers/history";
@@ -74,6 +75,7 @@ class App extends Component{
               <Route exact path="/register" component={Register}/>
               <Route exact path="/profile" component={Profile}/>
               <Route exact path="/user" component={User}/>
+              <Route exact path="/productos" component={Productos}/>
             </Switch>
           </div>
         </div>

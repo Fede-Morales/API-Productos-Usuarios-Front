@@ -7,9 +7,7 @@ class Profile extends Component {
 
     render() {
         const { user: currentUser } = this.props;
-        console.log(currentUser.Nombre);
-        console.log(currentUser.Email);
-        console.log(currentUser);
+        console.log({currentUser});
 
         if (!currentUser) { return <Redirect to="/login" /> }
 
@@ -34,7 +32,7 @@ class Profile extends Component {
                                     <div className="card-body text-center">
                                         <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
                                             className="rounded-circle img-fluid" style={{ width: "150px" }} />
-                                        <h5 className="my-3">{currentUser.Rol}</h5>
+                                        <h5 className="my-3">{currentUser.Nombre}</h5>
                                         <p className="text-muted mb-1">{(currentUser.Rol).replace("[", "").replace("]", "")}</p>
                                         {/* <p className="text-muted mb-1">{currentUser.roles ? currentUser.roles.replace("[", "").replace("]", "") : ""}</p> */}
                                         <p className="text-muted mb-4">Buenos Aires, Argentina</p>
